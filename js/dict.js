@@ -14,7 +14,7 @@ $(document).ready(function() {
 		$("#searchfield").focus();
 	});
 
-	Papa.parse('data/ManminoDict.csv', {
+	Papa.parse('data/ManminoDict.tsv', {
 		download: true,
 		header: false,
 		delimiter: '\t',
