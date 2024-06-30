@@ -26,11 +26,11 @@ $(document).ready(function() {
 });
 
 function searchEnglish(entry) {
-	return re.test(entry[0].toLowerCase());
+	return re.test(entry[2].toLowerCase());
 }
 
 function searchManmino(entry) {
-	return re.test(entry[1].toLowerCase());
+	return re.test(entry[0].toLowerCase());
 }
 
 function doSearch() {
@@ -52,7 +52,7 @@ function doSearch() {
 		if(results[0].length > 0 || results[1].length > 0) {
 			$("#noresults").hide();
 			$(".results_table tr:has(td)").remove();
-			$(document).prop("title", $("#searchfield").val() + " - NeoDict");
+			$(document).prop("title", $("#searchfield").val() + " - ManminoDict");
 
 			var re_start = new RegExp("^\\b" + query + "\\b");
 			results.forEach(function(ra, i) {
@@ -76,7 +76,7 @@ function doSearch() {
 		}
 		else {
 			$("#noresults").show();
-			$(document).prop("title", "NeoDict");
+			$(document).prop("title", "ManminoDict");
 		}
 	}
 }

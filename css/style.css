@@ -3,7 +3,7 @@
 }
 
 body {
-	font-family: sans-serif;
+	font-family: Inter, sans-serif;
 	font-size: 20px;
 	text-align: center;
 	background: var(--background-color);
@@ -41,9 +41,9 @@ body {
 }
 
 .results_table th {
-	background: #0644D9;
+	background: #7928CA;
 	color: var(--background-color);
-	border: 1px solid #0644D9;
+	border: 1px solid #7928CA;
 }
 
 .results_table td {
@@ -65,10 +65,10 @@ body {
 }
 
 #searchbutton {
-	background: #0644D9;
+	background: #7928CA;
 	font-size: 20px;
 	padding: 5px 8px;
-	border: 1px solid #0644D9;
+	border: 1px solid #7928CA;
 	border-radius: 10px;
 	cursor: pointer;
 	color: var(--background-color);
