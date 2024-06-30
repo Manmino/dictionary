@@ -45,9 +45,9 @@ function doSearch() {
 
 		var results = [[], []]
 		if($("#search_english").is(":checked"))
-			results[2] = dictionary.filter(searchEnglish);
+			results[0] = dictionary.filter(searchEnglish);
 		if($("#search_manmino").is(":checked"))
-			results[0] = dictionary.filter(searchManmino);
+			results[1] = dictionary.filter(searchManmino);
 
 		if(results[0].length > 0 || results[1].length > 0) {
 			$("#noresults").hide();
