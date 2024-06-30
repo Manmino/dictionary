@@ -26,7 +26,8 @@ $(document).ready(function() {
 });
 
 function searchEnglish(entry) {
-	return re.test(entry[2].toLowerCase());
+	// entry[number] ... number is the column number of the table
+	return re.test(entry[2].toLowerCase()); 
 }
 
 function searchManmino(entry) {
@@ -45,9 +46,9 @@ function doSearch() {
 
 		var results = [[], []]
 		if($("#search_english").is(":checked"))
-			results[1] = dictionary.filter(searchEnglish);
+			results[0] = dictionary.filter(searchEnglish);
 		if($("#search_manmino").is(":checked"))
-			results[0] = dictionary.filter(searchManmino);
+			results[1] = dictionary.filter(searchManmino);
 
 		if(results[0].length > 0 || results[1].length > 0) {
 			$("#noresults").hide();
