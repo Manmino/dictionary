@@ -17,7 +17,7 @@ $(document).ready(function() {
 	Papa.parse('data/dictionary2021-9-WIP.csv', {
 		download: true,
 		header: false,
-		delimiter: ',',
+		delimiter: '\t',
 		skipEmptyLines: true,
 		complete: function(results) {
 			dictionary = results.data;
@@ -27,7 +27,7 @@ $(document).ready(function() {
 
 function searchEnglish(entry) {
 	// entry[number] ... number is the column number of the table
-	return re.test(entry[2].toLowerCase()); 
+	return re.test(entry[1].toLowerCase()); 
 }
 
 function searchManmino(entry) {
@@ -46,9 +46,9 @@ function doSearch() {
 
 		var results = [[], []]
 		if($("#search_english").is(":checked"))
-			results[0] = dictionary.filter(searchEnglish);
+			results[1] = dictionary.filter(searchEnglish);
 		if($("#search_manmino").is(":checked"))
-			results[1] = dictionary.filter(searchManmino);
+			results[0] = dictionary.filter(searchManmino);
 
 		if(results[0].length > 0 || results[1].length > 0) {
 			$("#noresults").hide();
@@ -68,7 +68,7 @@ function doSearch() {
 					});
 					entries.forEach(function(e) {
 						e.forEach(function(r) {
-							$(tables[i]).append("<tr><td>" + r[i] + "</td><td>" + r[1-i] + "</td><td>" + r[1] + "</td><td>" + r[3] + "</td></tr>");
+							$(tables[i]).append("<tr><td>" + r[i] + "</td><td>" + r[1-i] + "</td><td>" + r[2] + "</td><td>" + r[3] + "</td></tr>");
 						});
 					});
 					$(tables[i]).show();
