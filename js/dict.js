@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 	Papa.parse('data/dictionary2021-9-WIP.csv', {
 		download: true,
-		header: true,
+		header: false,
 		delimiter: ',',
 		skipEmptyLines: true,
 		complete: function(results) {
