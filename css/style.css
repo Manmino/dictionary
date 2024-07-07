@@ -28,7 +28,7 @@
 .results_table tr:nth-child(2n){background: #E8E5E5;}
 
 .results_table th {
-	background: #E8E5E5;
+	background: #F2EFEF;
 	color: var(--background-color);
 	padding: 5px;
 ##	width: 50%;
