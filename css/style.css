@@ -22,11 +22,11 @@
 }
 
 .results_table tr {
-	background: var(--background-color);
+	background: #D8D6D6;
 }
 
 .results_table tr:nth-child(odd) {
-	background:  #D8D6D6;
+	background:  #E8E5E5;
 }
 
 .results_table th {
