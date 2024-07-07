@@ -18,7 +18,7 @@
 	margin: 30px auto auto auto;
 ##	width: 40%;
 	border: 1px #D8D6D6;
-	border-collapse: collapse;
+/*	border-collapse: collapse; */
 }
 
 .results_table tr {
