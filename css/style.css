@@ -25,9 +25,7 @@
 	background: #F2EFEF;
 }
 	
-.results_table tr:nth-child(odd) {
-	background:  #D8D6D6;
-}
+.results_table tr:nth-child(2n){background: #E8E5E5;}
 
 .results_table th {
 	background: #E8E5E5;
