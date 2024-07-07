@@ -24,7 +24,7 @@
 .results_table tr {
 	background: #D8D6D6;
 }
-
+	
 .results_table tr:nth-child(odd) {
 	background:  #F2EFEF;
 }
@@ -48,6 +48,7 @@
 	font-size: 20px;
 	width: 30%;
 	outline: none;
+	justify-content: center;
 }
 
 #searchbutton {
