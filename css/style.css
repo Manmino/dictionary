@@ -22,13 +22,13 @@
 }
 
 .results_table tr {
-	background: #F2EFEF;
+	background: #E8E5E5;
 }
 	
-.results_table tr:nth-child(2n){background: #E8E5E5;}
+.results_table tr:nth-child(2n){background: #F2EFEF;}
 
 .results_table th {
-	background: #F2EFEF;
+	background: #E8E5E5;
 	color: var(--background-color);
 	padding: 5px;
 ##	width: 50%;
