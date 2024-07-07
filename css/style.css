@@ -50,16 +50,13 @@
 /*	border-collapse: collapse; */
 }
 
-.results_table tr {
-	background: var(--nc-bg-1);
-}
+.results_table tr {background: var(--nc-bg-1);}
 	
 .results_table tr:nth-child(2n){background: var(--nc-bg-2);}
 
 .results_table th {
 	background: var(--nc-bg-2);
-	color: var(--background-color);
-	padding: 5px;
+	padding: 1rem;
 ##	width: 50%;
 }
 
