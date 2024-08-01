@@ -20,20 +20,38 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
+		<ul id="top_links">
+			<li class="qrcontrols"><a onclick="showQR()">Show QR code</a></li>
+		</ul>
+		<div id="qrcode" onclick="hideQR()"></div>
 		<a href="https://manmino.github.io/"><img src="https://manmino.github.io/manmino_logo_square.png" id="logo" alt="Manmino logo"></a>
 
+		<select name="dictselector" id="dictselector">
+			<option value="en">Manmino &ndash; English</option>
+			<option value="kr">Manmino &ndash; Korean</option>
+			<option value="jp">Manmino &ndash; Japanese</option>
+            <option value="zh">Manmino &ndash; Chinese</option>
+            <option value="tg">Manmino &ndash; Tagalog</option>
+            <option value="sa">Manmino &ndash; Sanskrit</option>
+		</select>
+			
 		<input type="text" id="searchfield" autocomplete="off" value="">
-		<button onclick="doSearch()" id="searchbutton"><i class="fa-solid fa-magnifying-glass"></i></button>
+		<button onclick="doSearch(true)" id="searchbutton"><i class="fa-solid fa-magnifying-glass"></i></button>
 		<div id="info">Use asterisk (*) as wildcard character.</div>
-		<input type="checkbox" id="search_english" checked><label for="search_english">Search English</label>
-		<input type="checkbox" id="search_manmino" checked><label for="search_manmino">Search Manmino</label>
+		<input type="checkbox" id="highlight_term" checked><label for="highlight_term"> Highlight search term in results</label><br>
+		<input type="checkbox" id="search_manmino" checked><label for="search_manmino"> Search in Manmino</label>
+		<input type="checkbox" id="search_nat" checked><label for="search_nat"> Search in <span class="natlang_lower">English</span></label>
+
 		<div id="noresults">No results</div>
 
 		<table class="results_table" id="results_manmino">
-			<tr><th>Manmino</th><th>English</th><th>Function</th><th>Origin</th></tr>
+			<tr><th colspan="2">Manmino &ShortRightArrow; <span class="natlang">English</span></th></tr>
+			<tr><td></td><td></td></tr>
 		</table>
-		<table class="results_table" id="results_english">
-			<tr><th>English</th><th>Manmino</th><th>Function</th><th>Origin</th></tr>
+		<table class="results_table" id="results_nat">
+			<tr><th colspan="2"><span class="natlang">English</span> &ShortRightArrow; Manmino</th></tr>
+			<tr><td></td><td></td></tr>
 		</table>
+	</body>
 	</body>
 </html>
